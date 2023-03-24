@@ -3,7 +3,7 @@ from pyspark.sql.functions import *
 import re
 from pyspark.sql.types import *
 spark = SparkSession.builder.master("local[2]").appName("test").getOrCreate()
-data="E:\\bigdata\\drivers\\world_bank.json"
+data="E:\\bigdata\\drivers\\world_bank.json"    // world_bank.json is the sample file 
 df=spark.read.format("json").load(data)
 
 def read_nested_json(df):
